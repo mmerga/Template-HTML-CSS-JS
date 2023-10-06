@@ -1,0 +1,110 @@
+/* 'rem' unit = 16px */
+/* font-size = 2rem */
+/* font-size = 32px */
+/* Better practice 'rem' units, also 'em' units for margin and padding */
+/* And % as width and height, also 'vw' and 'vh' */
+
+/* =================================== */
+/* =================================== */
+/* Soft smooth */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+/* This may be usefull for your media query */
+/* 
+480px
+768px
+1024px
+1280px
+*/
+
+/* =================================== */
+/* =================================== */
+/* Ajust box sizing */
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+/* =================================== */
+/* =================================== */
+/* Remove margin  */
+html, body{
+  margin: 0;
+}
+
+/* =================================== */
+/* =================================== */
+/* Hover Effect */
+.selector:hover{
+    color: blue;
+    transform: translateX(10px);
+    transition: transform 1s ease-out;
+}
+
+/* =================================== */
+/* =================================== */
+/* Image background atributes */
+.selector { 
+  background: url('./images/img.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* =================================== */
+/* =================================== */
+/* Flex template */
+.selector {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.selector:nth-child(1){
+  flex-basis: 100px;
+  order: 1; /* First item */
+  /* order: -1;  Last item */ 
+
+}
+
+/* =================================== */
+/* =================================== */
+/* Grid templates */
+#selector {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(3, minmax(100px, 1fr));
+  /* grid-template-columns: repeat(3, minmax(100px, 1fr)) auto */
+  /* grid-template-rows: repeat(3, minmax(100px, 1fr)) auto */
+  grid-template-areas: 
+    "nav header header",
+    "nav section-1 section-2",
+    "nav section-3 section-2"
+  ;
+  grid-gap: 1rem;
+}
+
+#selector:nth-child(1){
+  grid-area: nav;
+}
+
+/* =================================== */
+/* =================================== */
+/* Position */
+#selector{
+  position: relative;
+}
+
+#selector.selector:nth-child(1){
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
