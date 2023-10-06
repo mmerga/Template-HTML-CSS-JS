@@ -1,3 +1,6 @@
+HELLO THERE! 
+You are Free to Copy This Project, use it the way you want.
+
 //////////////////////---------------------///////////////////
 
 Project Name
